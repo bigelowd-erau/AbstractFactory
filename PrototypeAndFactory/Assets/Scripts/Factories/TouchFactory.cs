@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class KeyboardFactory : IProductFactory
+public class TouchFactory : IProductFactory
 {
     public IProduct Produce(ProductRequirements requirements)
     {
@@ -8,22 +8,22 @@ public class KeyboardFactory : IProductFactory
         {
             if (requirements.HasScreen)
             {
-                return new Laptop();
+                return new CellPhone();
             }
             else
             {
-                return new Typewriter();
+                return new EarBuds();
             }
         }
         else
         {
             if (requirements.HasScreen)
             {
-                return new Desktop();
+                return new SmartFridge();
             }
             else
             {
-                return new Jukebox();
+                return new FingerprintScanner();
             }
         }
     }
