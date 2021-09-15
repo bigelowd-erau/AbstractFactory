@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EarBuds : IProduct
+public class EarBuds : Product
 {
     
 }

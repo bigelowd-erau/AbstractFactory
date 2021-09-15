@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Desktop : IProduct
+public class Desktop : Product
 {
-    
+
 }

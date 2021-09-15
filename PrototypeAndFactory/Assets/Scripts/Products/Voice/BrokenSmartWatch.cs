@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BrokenSmartWatch : IProduct
+public class BrokenSmartWatch : Product
 {
     
 }

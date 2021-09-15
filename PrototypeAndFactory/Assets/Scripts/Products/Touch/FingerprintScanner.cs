@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FingerprintScanner : IProduct
+public class FingerprintScanner : Product
 {
     
 }

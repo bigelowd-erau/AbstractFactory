@@ -14,7 +14,6 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     {
-        factoryFactory = new FactoryFactory();
         requirements = new ProductRequirements();
 
         requirements.interactionType = (InteractionType)inputType.value;

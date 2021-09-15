@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CellPhone : IProduct
+public class CellPhone : Product
 {
     
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Jukebox : IProduct
+public class Jukebox : Product
 {
     
 }

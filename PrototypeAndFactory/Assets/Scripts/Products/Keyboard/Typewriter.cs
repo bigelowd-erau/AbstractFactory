@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Typewriter : IProduct
+public class Typewriter : Product
 {
     
 }

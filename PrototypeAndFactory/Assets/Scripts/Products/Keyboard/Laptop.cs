@@ -1,9 +1,6 @@
 using UnityEngine;
 
-public class Laptop : MonoBehaviour, IProduct
+public class Laptop : Product
 {
-    public Laptop()
-    {
-        Instantiate(Resources.Load("Prefabs/Laptop"));
-    }
+    
 }

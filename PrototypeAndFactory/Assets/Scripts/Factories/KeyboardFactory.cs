@@ -1,7 +1,12 @@
 using UnityEngine;
 
-public class KeyboardFactory : IProductFactory
+public class KeyboardFactory : MonoBehaviour, IProductFactory
 {
+    public Laptop laptop;
+    public IProduct desktop;
+    public IProduct typewriter;
+    public IProduct jukebox;
+
     public IProduct Produce(ProductRequirements requirements)
     {
         Debug.Log("Keyboard made");
@@ -9,8 +14,9 @@ public class KeyboardFactory : IProductFactory
         {
             if (requirements.HasScreen)
             {
-                IProduct laptop = new Laptop();
-                return laptop;
+                //INPC laptop = new Beggar();
+                //return beggar;
+                return laptop.Copy();
             }
             else
             {

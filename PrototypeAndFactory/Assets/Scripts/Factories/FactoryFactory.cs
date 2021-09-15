@@ -1,18 +1,25 @@
 using UnityEngine;
 
-public class FactoryFactory : IProductFactory
+public class FactoryFactory :MonoBehaviour, IProductFactory
 {
+    public KeyboardFactory keyboardFactory;
+    public TouchFactory touchFactory;
+    public VoiceFactory voiceFactory;
+
+
     public IProduct Produce(ProductRequirements requirements)
     {
         switch(requirements.interactionType)
         {
             case InteractionType.Keyboard:
-                IProduct keyboardFactory = new KeyboardFactory().Produce(requirements);
-                return keyboardFactory;
+                IProduct keyboardProduct = keyboardFactory.Produce(requirements);
+                return keyboardProduct;
             case InteractionType.Touch:
-                return new TouchFactory().Produce(requirements);
+                IProduct touchProduct = touchFactory.Produce(requirements);
+                return touchProduct;
             case InteractionType.Voice:
-                return new VoiceFactory().Produce(requirements);
+                IProduct voiceProduct = voiceFactory.Produce(requirements);
+                return voiceProduct;
         }
         return null;
     }
