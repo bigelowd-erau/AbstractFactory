@@ -7,7 +7,8 @@ public class FactoryFactory : IProductFactory
         switch(requirements.interactionType)
         {
             case InteractionType.Keyboard:
-                return new KeyboardFactory().Produce(requirements);
+                IProduct keyboardFactory = new KeyboardFactory().Produce(requirements);
+                return keyboardFactory;
             case InteractionType.Touch:
                 return new TouchFactory().Produce(requirements);
             case InteractionType.Voice:

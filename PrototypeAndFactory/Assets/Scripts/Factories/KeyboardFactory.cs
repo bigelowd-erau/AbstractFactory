@@ -4,11 +4,13 @@ public class KeyboardFactory : IProductFactory
 {
     public IProduct Produce(ProductRequirements requirements)
     {
+        Debug.Log("Keyboard made");
         if (requirements.IsPortable)
         {
             if (requirements.HasScreen)
             {
-                return new Laptop();
+                IProduct laptop = new Laptop();
+                return laptop;
             }
             else
             {
