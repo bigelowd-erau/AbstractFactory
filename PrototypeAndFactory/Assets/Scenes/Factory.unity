@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 270977232}
   - component: {fileID: 270977231}
   m_Layer: 0
-  m_Name: NPCFactory
+  m_Name: AbstractFactory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 270977230}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a279b8de4a2f70c40890f496910032f1, type: 3}
+  m_Script: {fileID: 11500000, guid: a21755a458bad374a999235bbcdca7d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &270977232
@@ -175,27 +175,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 389697629}
-  - component: {fileID: 389697628}
   m_Layer: 0
-  m_Name: NPCSpawner
+  m_Name: Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &389697628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389697627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f70ac2463be1454194a556391948f3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Factory: {fileID: 270977231}
 --- !u!4 &389697629
 Transform:
   m_ObjectHideFlags: 0
@@ -332,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e45bb8ac2590c24095f6491d6bc2d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SpawnerNPC: {fileID: 389697628}
+  m_SpawnerNPC: {fileID: 0}
 --- !u!4 &810524474
 Transform:
   m_ObjectHideFlags: 0
