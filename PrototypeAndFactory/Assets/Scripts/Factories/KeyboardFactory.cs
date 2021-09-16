@@ -3,9 +3,9 @@ using UnityEngine;
 public class KeyboardFactory : MonoBehaviour, IProductFactory
 {
     public Laptop laptop;
-    public IProduct desktop;
-    public IProduct typewriter;
-    public IProduct jukebox;
+    public Desktop desktop;
+    public Typewriter typewriter;
+    public Jukebox jukebox;
 
     public IProduct Produce(ProductRequirements requirements)
     {
@@ -14,24 +14,22 @@ public class KeyboardFactory : MonoBehaviour, IProductFactory
         {
             if (requirements.HasScreen)
             {
-                //INPC laptop = new Beggar();
-                //return beggar;
                 return laptop.Copy();
             }
             else
             {
-                return new Typewriter();
+                return typewriter.Copy();
             }
         }
         else
         {
             if (requirements.HasScreen)
             {
-                return new Desktop();
+                return desktop.Copy();
             }
             else
             {
-                return new Jukebox();
+                return jukebox.Copy();
             }
         }
     }

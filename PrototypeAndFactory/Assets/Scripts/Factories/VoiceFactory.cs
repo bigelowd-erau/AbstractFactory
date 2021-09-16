@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class VoiceFactory : IProductFactory
+public class VoiceFactory : MonoBehaviour, IProductFactory
 {
     public IProduct Produce(ProductRequirements requirements)
     {
