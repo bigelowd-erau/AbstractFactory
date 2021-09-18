@@ -8,22 +8,26 @@ public class TouchFactory : IProductFactory
         {
             if (requirements.HasScreen)
             {
-                return new CellPhone();
+                Debug.Log("Cell Phone made");
+                return cellphone.Copy();
             }
             else
             {
-                return new EarBuds();
+                Debug.Log("Ear Buds made");
+                return earBuds.Copy();
             }
         }
         else
         {
             if (requirements.HasScreen)
             {
-                return new SmartFridge();
+                Debug.Log("Smart Fridge made");
+                return smartFridge.Copy();
             }
             else
             {
-                return new FingerprintScanner();
+                Debug.Log("Fingerprint Scanner Door made");
+                return fingerprintScanner.Copy();
             }
         }
     }

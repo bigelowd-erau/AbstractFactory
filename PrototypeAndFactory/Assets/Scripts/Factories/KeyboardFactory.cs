@@ -9,29 +9,30 @@ public class KeyboardFactory : MonoBehaviour, IProductFactory
 
     public IProduct Produce(ProductRequirements requirements)
     {
-        Debug.Log("Keyboard made");
         if (requirements.IsPortable)
         {
             if (requirements.HasScreen)
             {
-                //INPC laptop = new Beggar();
-                //return beggar;
+                Debug.Log("Laptop made");
                 return laptop.Copy();
             }
             else
             {
-                return new Typewriter();
+                Debug.Log("Typewriter made");
+                return typewriter.Copy();
             }
         }
         else
         {
             if (requirements.HasScreen)
             {
-                return new Desktop();
+                Debug.Log("Desktop made");
+                return desktop.Copy();
             }
             else
             {
-                return new Jukebox();
+                Debug.Log("Jukebox made");
+                return jukebox.Copy();
             }
         }
     }
