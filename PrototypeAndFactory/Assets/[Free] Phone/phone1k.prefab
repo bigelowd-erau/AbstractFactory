@@ -101,6 +101,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+<<<<<<< HEAD:PrototypeAndFactory/Assets/[Free] Phone/phone1k.prefab
 <<<<<<< Updated upstream:PrototypeAndFactory/Assets/Resources/Prefabs/Desktop.prefab
 =======
 --- !u!65 &2320493672021602639
@@ -117,11 +118,15 @@ BoxCollider:
   m_Size: {x: 0.07008483, y: 0.14368328, z: 0.006549459}
   m_Center: {x: 0, y: 0, z: -0.0004716526}
 --- !u!114 &2137203946979538739
+=======
+--- !u!114 &4629552583389920658
+>>>>>>> main:PrototypeAndFactory/Assets/Resources/Prefabs/Desktop.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:PrototypeAndFactory/Assets/[Free] Phone/phone1k.prefab
   m_GameObject: {fileID: 5560905291789515636}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -129,3 +134,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 >>>>>>> Stashed changes:PrototypeAndFactory/Assets/[Free] Phone/phone1k.prefab
+=======
+  m_GameObject: {fileID: 8521778413336501534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac5e8e603e9c2c4382c1a8cbd53815b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> main:PrototypeAndFactory/Assets/Resources/Prefabs/Desktop.prefab

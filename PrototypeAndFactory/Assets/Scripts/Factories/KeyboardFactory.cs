@@ -3,9 +3,9 @@ using UnityEngine;
 public class KeyboardFactory : MonoBehaviour, IProductFactory
 {
     public Laptop laptop;
-    public IProduct desktop;
-    public IProduct typewriter;
-    public IProduct jukebox;
+    public Desktop desktop;
+    public Typewriter typewriter;
+    public Jukebox jukebox;
 
     public IProduct Produce(ProductRequirements requirements)
     {

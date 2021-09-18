@@ -1,7 +1,12 @@
 using UnityEngine;
 
-public class TouchFactory : IProductFactory
+public class TouchFactory : MonoBehaviour, IProductFactory
 {
+    public CellPhone cellphone;
+    public EarBuds earBuds;
+    public SmartFridge smartFridge;
+    public FingerprintScanner fingerprintScanner;
+
     public IProduct Produce(ProductRequirements requirements)
     {
         if (requirements.IsPortable)
