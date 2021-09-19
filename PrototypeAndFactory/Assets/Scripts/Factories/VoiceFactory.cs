@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class VoiceFactory : MonoBehaviour, IProductFactory
 {
-    public SmartWatch smartWatch;
-    public BrokenSmartWatch brokenSmartWatch;
-    public AnnoyingTV annoyingTV;
-    public SmartHomeSpeaker smartHomeSpeaker;
+    public SmartWatch smartWatch; //Portable and Has Screen
+    public BrokenSmartWatch brokenSmartWatch; //Portable and No Screen
+    public AnnoyingTV annoyingTV; //Non-Portable and Has Screen
+    public SmartHomeSpeaker smartHomeSpeaker; //Non-Portable and No Screen
     public IProduct Produce(ProductRequirements requirements)
     {
         if (requirements.IsPortable)
         {
             if (requirements.HasScreen)
             {
+                //Logs to console what was made, and creates a new object of
+                //that type through the Product's Copy method
                 Debug.Log("Smart Watch made");
                 return smartWatch.Copy();
             }

@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class KeyboardFactory : MonoBehaviour, IProductFactory
 {
-    public Laptop laptop;
-    public Desktop desktop;
-    public Typewriter typewriter;
-    public Jukebox jukebox;
+    public Laptop laptop; //Portable and has Screen
+    public Desktop desktop; //Non-Portable and has Screen
+    public Typewriter typewriter; //Portable and No Screen
+    public Jukebox jukebox; //Non-Portable and no Screen
 
     public IProduct Produce(ProductRequirements requirements)
     {
@@ -13,6 +13,8 @@ public class KeyboardFactory : MonoBehaviour, IProductFactory
         {
             if (requirements.HasScreen)
             {
+                //Logs to console what was made, and creates a new object of
+                //that type through the Product's Copy method
                 Debug.Log("Laptop made");
                 return laptop.Copy();
             }

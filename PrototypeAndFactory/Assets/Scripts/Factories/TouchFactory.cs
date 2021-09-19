@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class TouchFactory : MonoBehaviour, IProductFactory
 {
-    public CellPhone cellphone;
-    public EarBuds earBuds;
-    public SmartFridge smartFridge;
-    public FingerprintScanner fingerprintScanner;
+    public CellPhone cellphone; //Portable and Has Screen
+    public EarBuds earBuds; //Portable and No Screen
+    public SmartFridge smartFridge; //Non-Portable and Has Screen
+    public FingerprintScanner fingerprintScanner; //Non-Portable and No Screen
 
     public IProduct Produce(ProductRequirements requirements)
     {
@@ -13,6 +13,8 @@ public class TouchFactory : MonoBehaviour, IProductFactory
         {
             if (requirements.HasScreen)
             {
+                //Logs to console what was made, and creates a new object of
+                //that type through the Product's Copy method
                 Debug.Log("Cell Phone made");
                 return cellphone.Copy();
             }

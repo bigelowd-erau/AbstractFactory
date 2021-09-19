@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,10 +13,13 @@ public class Spawner : MonoBehaviour
     public void Spawn()
     {
         requirements = new ProductRequirements();
-
+        //get interaction type through UI dropdown
         requirements.interactionType = (InteractionType)inputType.value;
+        //get if portable through UI Checkbox
         requirements.IsPortable = isPortable.isOn;
+        //get if has a screen through UI Checkbox
         requirements.HasScreen = hasScreen.isOn;
+        //call the abstract factory passing the 3 requirements
         factoryFactory.Produce(requirements);
     }
 }
